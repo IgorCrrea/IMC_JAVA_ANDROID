@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaInicial"
+    android:background="#d9c3b5">
+
+    <ImageView android:id="@+id/imagem_principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/imc"
+        android:contentDescription="TODO" />
+
+    <TextView android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imagem_principal"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:gravity="center"
+        android:text="@string/calcular_imc"
+        android:textColor="#2152ad"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/insert_altura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titulo"
+        android:layout_margin="16dp"
+        android:focusable="true"
+        android:hint="@string/altura"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/insert_peso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/insert_altura"
+        android:layout_margin="16dp"
+        android:focusable="true"
+        android:hint="@string/peso"
+        android:textAlignment="viewStart"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/calcular"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/insert_peso"
+        android:focusable="true"
+        />
+
+
+</RelativeLayout>
