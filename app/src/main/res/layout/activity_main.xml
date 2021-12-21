@@ -31,32 +31,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/titulo"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:focusable="true"
         android:hint="@string/altura"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/insert_peso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/insert_altura"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:focusable="true"
         android:hint="@string/peso"
+        android:inputType="number"
         android:textAlignment="viewStart"
-        android:inputType="number"/>
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/calcular"
-        android:layout_marginTop="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calcular"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/insert_peso"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
         android:focusable="true"
-        />
+        android:text="Calcular" />
 
 
 </RelativeLayout>

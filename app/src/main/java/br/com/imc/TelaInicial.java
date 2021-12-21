@@ -7,7 +7,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import br.com.imc.R;
+import br.com.imc.excption.InputNull;
+import br.com.imc.modelo.Calculo;
+import br.com.imc.modelo.TratamentoEntrada;
+
 
 public class TelaInicial extends AppCompatActivity {
 
@@ -23,8 +26,21 @@ public class TelaInicial extends AppCompatActivity {
         peso = findViewById(R.id.insert_peso);
 
         Button calcular = findViewById(R.id.calcular);
+
         calcular.setOnClickListener((View view) -> {
-            Toast.makeText(TelaInicial.this, peso.getText().toString()+"-"+altura.getText().toString(), Toast.LENGTH_SHORT).show();
+
+            TratamentoEntrada tratar = new TratamentoEntrada(altura,peso);
+
+            try{
+                double valorAltura = tratar.getAltura();
+                double valorPeso = tratar.getPeso();
+
+                Calculo calc = new Calculo(valorAltura,valorPeso);
+
+                Toast.makeText(TelaInicial.this, calc.getValor(), Toast.LENGTH_LONG).show();
+            }catch (InputNull ex){
+                Toast.makeText(TelaInicial.this,"Valor Vazio", Toast.LENGTH_LONG).show();
+            }
         });
 
     }
