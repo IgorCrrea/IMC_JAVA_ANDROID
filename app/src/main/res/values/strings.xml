@@ -2,6 +2,6 @@
     <string name="app_name">IMC</string>
     <string name="altura">Altura (Ex: 1.72)</string>
     <string name="calcular_imc">Calcular IMC</string>
-    <string name="peso">peso (Ex:75)</string>
+    <string name="peso">peso (Ex:75.5)</string>
     <string name="button">Button</string>
 </resources>
